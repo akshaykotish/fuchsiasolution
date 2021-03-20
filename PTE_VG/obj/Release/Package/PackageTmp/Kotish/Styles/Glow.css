@@ -1,0 +1,20 @@
+﻿.glow {
+    color: #FFFAF0;
+    text-align: center;
+    -webkit-animation: glow 5s ease-in-out infinite alternate;
+    -moz-animation: glow 5s ease-in-out infinite alternate;
+    animation: glow 5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        opacity: 0.5;
+        text-shadow: 0 0 10px #FFFAF0, 0 0 20px #FFFAF0, 0 0 30px #E0FFFF, 0 0 40px #F0FFF0, 0 0 50px #F0FFF0, 0 0 60px #F0F8FF, 0 0 70px #F0FFFF;
+    }
+
+    to {
+        opacity: 0.9;
+        color: gray;
+        text-shadow: 0 0 20px #E6E6FA, 0 0 30px #FFFFF0, 0 0 40px #87CEFA, 0 0 50px #87CEFA, 0 0 60px #F0FFF0, 0 0 70px #F8F8FF, 0 0 80px #FFFAF0;
+    }
+}

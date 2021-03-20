@@ -1,0 +1,44 @@
+﻿body {
+}
+
+.Search_Section {
+    position: absolute;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.5s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url('../../../Images/Icons/Search.png');
+    background-position: left;
+    background-size: 30px;
+    background-position-x: 5px;
+    background-repeat: no-repeat;
+}
+
+    .Search_Section:hover {
+        width:500px;
+        background-color: whitesmoke;
+        box-shadow:2px 2px 4px gray;
+    }
+
+
+        .Search_Section input[type=text] {
+            display:none;
+        }
+
+    .Search_Section:hover input[type=text] {
+        display:block;
+        margin-left:10%;
+        width: 500px;
+        height: 100%;
+        padding: 2%;
+        border: none;
+        font-size: large;
+        background-color: whitesmoke;
+    }

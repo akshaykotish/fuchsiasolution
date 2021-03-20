@@ -1,0 +1,330 @@
+﻿     <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="PTE_VG.Admin0" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server"><meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Kotish/dist/css/swiper.min.css" rel="stylesheet" />
+    <link href="../Kotish/dist/css/swiper.css" rel="stylesheet" />
+    <%--<link href="../Kotish/Reponsive.css" rel="stylesheet" />--%>
+    <link href="../Kotish/Styles/Design.css" rel="stylesheet" />
+    <link href="../Kotish/Styles/animate.css" rel="stylesheet" />
+    <link href="../Kotish/Styles/ODA.css" rel="stylesheet" />
+    <link href="../Kotish/Styles/Tab.css" rel="stylesheet" />
+    <link href="../Kotish/Styles/Glow.css" rel="stylesheet" />
+    <link href="../Kotish/Styles/DDUpload.css" rel="stylesheet" />
+    <link rel="icon" href="../Images/favicons/favicon.png" type="image/png" sizes="16x16">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <meta name="description" content="Your Description Here">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+body {
+  margin: 0;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  padding:2%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width:2000px)
+{
+    
+.topnav {
+    display:none;
+}
+}
+
+
+@media screen and (max-width:600px)
+{
+    
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  padding:2%;
+  display:block;
+}
+}
+
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+ .launchs{
+     position:fixed;
+    bottom:45%;
+    right:35%;
+    border:solid 3px red;
+    padding:1%;
+     font-size:medium;
+     color:red;   
+     text-align:center;
+     background-color:black;
+     text-shadow: 0 0 20px red, 0 0 30px blue, 0 0 40px black, 0 0 50px yellow, 0 0 60px white, 0 0 70px red, 0 0 80px #FFFAF0F66;
+    -webkit-animation: wrng 160s ease-in-out infinite alternate;
+        -moz-animation: wrng 160s ease-in-out infinite alternate;
+        animation: wrng 160s ease-in-out infinite alternate;
+        display:none;
+ }
+@-webkit-keyframes wrng {
+    0% {
+        opacity:0;
+        display:none;
+   }
+
+    50%{
+        border:solid 3px red;
+        color:red;   
+        background-color:black;
+    }
+
+    100% {
+         border:solid 3px black;
+        color:black;   
+        background-color:red;
+    }
+}
+
+.Mob_Header{
+    visibility:hidden;
+}
+
+@media only screen and (max-width:600px){
+
+.Mob_Header{
+    visibility:visible;
+    display:normal;
+    position: fixed;
+    top: -1%;
+    left: -1%;
+    right: -1%;
+    height: 60px;
+    z-index: 3;
+    background-color: white;
+    font-family: 'Fira Sans', sans-serif;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    -moz-border-radius-bottomleft: 40px;
+    -moz-border-radius-bottomright: 40px;
+    -webkit-border-bottom-left-radius: 40px;
+    -webkit-border-bottom-right-radius: 40px;
+    box-shadow:5px 5px 100px gray;
+}
+
+.Mob_Footer{
+    display:normal;
+    position: fixed;
+    bottom: -1%;
+    left: -1%;
+    right: -1%;
+    height: 60px;
+    overflow: hidden;
+    font-size: x-small;
+    z-index: 3;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    -moz-border-radius-bottomleft: 40px;
+    -moz-border-radius-bottomright: 40px;
+    -webkit-border-top-left-radius: 40px;
+    -webkit-border-top-right-radius: 40px;
+    box-shadow: 5px 5px 30px gray;
+    cursor: default;
+}
+}
+   
+</style>
+    <link href="Kotish/animate.css" rel="stylesheet" />
+    <link href="Kotish/Loader.css" rel="stylesheet" />
+
+</head>
+<body id="mnbdy">
+    <form id="form1" runat="server">
+           <asp:ScriptManager ID="scrpt_mngr" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+    
+        <div>
+            <div class="Header">
+                
+                <div class="fs">
+
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li onclick="loading()"><a href="Questions.aspx">Questions</a></li>
+                        <li onclick="loading()"><a href="Batches.aspx">Batches</a></li>
+                        <li onclick="loading()"><a href="Test_Maker.aspx">Assignments</a></li>
+                        <li onclick="loading()"><a href="Test_Assign.aspx">Assigns</a></li>
+                        <li onclick="loading()"><a href="Test_Checker.aspx">Examine</a></li>
+                        <li onclick="loading()"><a href="MyStudents.aspx">Students</a></li>
+                    </ul>
+                    <div class="prof" onclick="navigate_to('Profile.aspx');">
+
+                    </div>
+                </div>
+            </div>
+              <div class="Mob_Header">
+                   <div onclick="navigate_to('Dashboard.aspx')" class="prof" style="width:30px; height:30px; left:4%; right:90%; top:1.2%; background-image:url('Images/Icons/home.png');">
+                       
+                    </div>
+                 <div class="fs" style=" top:2%; left:33%;" onclick="navigate_to('Dashboard.aspx')">
+                    Fhusia Solutions
+                </div>
+                  <div class="prof" onclick="navigate_to('Profile.aspx');" style="width:30px; height:30px; right:4%; top:1.5%; z-index:99;" >
+
+                    </div>
+              </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />  
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="Mob_Footer">
+               <div class="fotnav" style="font-size:smaller; left:-4%;">
+                     <ul style="font-size:small; text-align:center;left:0%;">
+                         <li style="font-size:small;">Developers</li>
+                        <li onclick="navigate_to('tc.html')">T&C</li>
+                         <li onclick="navigate_to('about.html')">About</li>
+                         <li onclick="navigate_to('contact.html')">Contact</li>
+                     </ul>
+                 </div>
+            </div>
+             <div class="Footer">
+                 <span class="my_loog glow">Designed by <b>Akshay Kotish & Co.</b></span>
+                 <div class="fotnav">
+                     <ul>
+                        <li onclick="navigate_to('tc.html')">T&C</li>
+                         <li onclick="navigate_to('about.html')">About</li>
+                         <li onclick="navigate_to('contact.html')">Contact</li>
+                    </ul>
+                 </div>
+                </div>
+        </div>
+    <div class="launchs">
+        Design Check Enviournment - NOT FOR USE
+        <br />
+       <span style="font-size:small; color:white; font-family:'Century Gothic';"> Powered By <b>Akshay Kotish & Co.</b></span>
+    </div>
+        <div id="bgloader" class="bgloader">
+            <div id="loader" class="loader"></div>
+        </div>
+        <script src="Kotish/Tab.js"></script>
+        <script>
+
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+
+            function daytimecolor() {
+                var d = new Date();
+                var hr = d.getHours();
+                if ((hr >= 19 && hr <=23) || (hr <= 6 && hr >= 0)) {
+                    //document.body.style.backgroundColor = "whitesmoke";
+                    //document.body.style.background = "#90EE90";
+                    //document.body.style.background = "-webkit-linear-gradient(to right, #20B2AA, #90EE90)";
+                    //document.body.style.background = "linear-gradient(to right, #20B2AA, #90EE90)";
+                }
+                else {      
+                    //document.body.style.background = "#90EE90";
+                    //document.body.style.background = "-webkit-linear-gradient(to right, #20B2AA, #90EE90)";
+                    //document.body.style.background = "linear-gradient(to right, #20B2AA, #90EE90)";
+                }
+            }
+
+            daytimecolor();
+
+            function chng_url() {
+                if (history.pushState) {
+                    window.history.pushState("object or string", "Page Title", "/newURL");
+                } else {
+                    document.location.href = "/newURL";
+                }
+            }
+            function navigate_to(e) {
+                window.location.replace(e);
+            }
+
+            document.onreadystatechange = function() { 
+                if (document.readyState !== "complete") { 
+                    document.querySelector("#bgloader").style.visibility = "visible"; 
+                    document.querySelector("#loader").style.visibility = "visible"; 
+                }
+                else { 
+                    document.querySelector("#bgloader").style.display = "none"; 
+                    document.querySelector("#loader").style.display = "none";   
+                } 
+            }; 
+
+            
+            </script>
+
+         <%--<script type="text/javascript" src="Kotish/Sparkle.js"></script>--%>
+        <%--<script src="Kotish/Touch.js"></script>--%>
+    </form>
+</body>
+</html>

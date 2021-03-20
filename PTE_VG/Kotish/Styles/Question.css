@@ -1,0 +1,169 @@
+﻿.main {
+    position: fixed;
+    top: 9%;
+    bottom: 9%;
+    overflow: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    left: 2%;
+    right: 2%;
+    /*overflow: hidden;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 8px 8px 16px #6e6e6e, -8px -8px 16px #ffffff;*/
+}
+
+    .main:hover {
+        box-shadow: -8px 8px 16px #6e6e6e, 8px -8px 16px #ffffff;
+    }
+
+.m1 {
+    position: fixed;
+    left: 2%;
+    right: 51%;
+    border-radius: 10px;
+    /*background: linear-gradient(225deg, #ffffff, #e6e6e6);*/
+}
+
+    .m1:hover {
+        box-shadow: -8px 8px 16px #6e6e6e, 8px -8px 16px #ffffff;
+    }
+
+.m2 {
+    position: fixed;
+    left: 51%;
+    right: 2%;
+}
+
+    .m2:hover {
+        box-shadow: -8px 8px 16px #6e6e6e, 8px -8px 16px #ffffff;
+    }
+
+.box {
+    margin: 1%;
+}
+.inn_box{
+    width:100%;
+    height:85%;
+    overflow:auto;
+    overflow-x:hidden;
+}
+
+.modal-content {
+    width: 30%;
+    height: 100px;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 8px;
+}
+
+
+.header {
+    padding: 1%;
+    letter-spacing: 0.4px;
+    font-size: 90%;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    color: white;
+    box-shadow: 2px 3px 3px gray;
+}
+
+tr {
+    width: 100%;
+}
+
+.mcq {
+    height: 20px;
+    background-color: whitesmoke;
+    border: none;
+}
+
+
+.m-section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.m-header {
+    padding: 4%;
+    background-color: mintcream;
+    margin-left: -4%;
+    margin-right: -4%;
+    margin-top: -4%;
+    width: 104%;
+    height: 25px;
+    overflow: hidden;
+    box-shadow: 2px 3px 3px gray;
+}
+.ans {
+    border: solid 1px black;
+}
+    @media only screen and (max-width:600px) {
+        .onmob {
+            display: none;
+        }
+
+        .inn_box {
+            width: 100%;
+            height: 90%;
+            overflow: auto;
+        }
+
+
+        .main {
+            position: fixed;
+            top: 14%;
+            bottom: 14%;
+            left: 2.5%;
+            right: 2.5%;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            box-shadow: 8px 8px 16px #6e6e6e, -8px -8px 16px #ffffff;
+            z-index: 99;
+        }
+
+
+        .m1 {
+            position: fixed;
+            top: 12%;
+            left: 2%;
+            right: 2%;
+            height:38%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            z-index:99;
+        }
+
+
+        .m2 {
+            position: fixed;
+            top: 52%;
+            left: 2%;
+            right: 2%;
+            height: 38%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            z-index: 99;
+        }
+
+        
+        .modal-content {
+            width: 80%;
+            height: 50%;
+            box-shadow: 2px 2px 5px gray;
+            border-radius: 8px;
+            border: solid 1px gray;
+            background-color: snow;
+            text-align: center;
+        }
+
+
+
+
+        .header {
+            padding: 3%;
+            background-color:white;
+         }
+    }

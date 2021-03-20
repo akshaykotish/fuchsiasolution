@@ -1,0 +1,731 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56B12F3C-4D53-4A71-B1DD-00ECBB8FAC0E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PTE_VG</RootNamespace>
+    <AssemblyName>PTE_VG</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\TCP\Server\Server\Server\bin\Release\Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin_\AddAdmin.aspx" />
+    <Content Include="Admin_\AddStudents.aspx" />
+    <Content Include="App_Data\PTE.mdf" />
+    <Content Include="App_Data\PTE_log.ldf">
+      <DependentUpon>PTE.mdf</DependentUpon>
+    </Content>
+    <Content Include="Admin_\Batches.aspx" />
+    <Content Include="Admin_\Create_Batch.aspx" />
+    <Content Include="Admin_\Dashboard.aspx" />
+    <Content Include="Demos\Kotish\Elements\Demo\Company_Cards.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\Footer.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\Full_Page.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\Header.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\Images\Footer.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\Images\nikeshoes.png" />
+    <Content Include="Demos\Kotish\Elements\Demo\index.css" />
+    <Content Include="Demos\Kotish\Elements\Demo\index.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\index.js" />
+    <Content Include="Demos\Kotish\Elements\Demo\Logo.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\Logo.js" />
+    <Content Include="Demos\Kotish\Elements\Demo\neumorphism.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\SearchBox.html" />
+    <Content Include="Demos\Kotish\Elements\Demo\TextBoxes.html" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\OFL.txt" />
+    <Content Include="Demos\Kotish\Images\account.png" />
+    <Content Include="Demos\Kotish\Images\Bill.png" />
+    <Content Include="Demos\Kotish\Images\clients.png" />
+    <Content Include="Demos\Kotish\Images\company.png" />
+    <Content Include="Demos\Kotish\Images\home.png" />
+    <Content Include="Demos\Kotish\Images\meeting.png" />
+    <Content Include="Demos\Kotish\Images\promote.png" />
+    <Content Include="Demos\Kotish\Images\setting.png" />
+    <Content Include="Demos\Kotish\Images\store.png" />
+    <Content Include="Demos\Kotish\Images\team.png" />
+    <Content Include="Demos\Kotish\Styles\Banner.css" />
+    <Content Include="Demos\Kotish\Styles\Company-Cards.css" />
+    <Content Include="Demos\Kotish\Styles\Demo.css" />
+    <Content Include="Demos\Kotish\Styles\Footer.css" />
+    <Content Include="Demos\Kotish\Styles\Header.css" />
+    <Content Include="Demos\Kotish\Styles\Logo.css" />
+    <Content Include="Demos\Kotish\Styles\neumorphism.css" />
+    <Content Include="Demos\Kotish\Styles\Neumorphism_Button.css" />
+    <Content Include="Demos\Kotish\Styles\Product_Card_Clip_Path.css" />
+    <Content Include="Demos\Kotish\Styles\Product_Card_Image_Up.css" />
+    <Content Include="Demos\Kotish\Styles\Search.css" />
+    <Content Include="Demos\Kotish\Styles\Security-Elements.css" />
+    <Content Include="Demos\Kotish\Styles\TextBox.css" />
+    <Content Include="Demos\Kotish\Styles\Titles.css" />
+    <Content Include="Demos\Kotish\Styles\ToolTip.css" />
+    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\category-1.jpg" />
+    <Content Include="Images\category-2.jpg" />
+    <Content Include="Images\category-3.jpg" />
+    <Content Include="Images\category-4.jpg" />
+    <Content Include="Images\category-5.jpg" />
+    <Content Include="Images\category-6.jpg" />
+    <Content Include="Images\category-7.jpg" />
+    <Content Include="Images\category-8.jpg" />
+    <Content Include="Images\category-9.jpg" />
+    <Content Include="Images\email-box-arrow.png" />
+    <Content Include="Images\favicons\android-chrome-192x192.png" />
+    <Content Include="Images\favicons\apple-touch-icon.png" />
+    <Content Include="Images\favicons\browserconfig.xml" />
+    <Content Include="Images\favicons\favicon-16x16.png" />
+    <Content Include="Images\favicons\favicon-32x32.png" />
+    <Content Include="Images\favicons\favicon.png" />
+    <Content Include="Images\favicons\mstile-150x150.png" />
+    <Content Include="Images\favicons\safari-pinned-tab.svg" />
+    <Content Include="Images\Icons\Assign.png" />
+    <Content Include="Images\Icons\Assignment.png" />
+    <Content Include="Images\Icons\batch.png" />
+    <Content Include="Images\Icons\check.png" />
+    <Content Include="Images\Icons\fslogo.png" />
+    <Content Include="Images\Icons\home.png" />
+    <Content Include="Images\Icons\Loading.gif" />
+    <Content Include="Images\Icons\question.png" />
+    <Content Include="Images\Icons\Search.png" />
+    <Content Include="Images\Icons\SearchFS.png" />
+    <Content Include="Images\Icons\student.png" />
+    <Content Include="Images\Icons\texture.png" />
+    <Content Include="Images\Icons\TreePot.png" />
+    <Content Include="Images\Icons\Audio.png" />
+    <Content Include="Images\Icons\biglogo.png" />
+    <Content Include="Images\Icons\img.png" />
+    <Content Include="Images\Icons\prof.png" />
+    <Content Include="Images\Icons\progress.png" />
+    <Content Include="Images\Icons\satisfaction.png" />
+    <Content Include="Images\Icons\tests.png" />
+    <Content Include="Images\Icons\userlogo.png" />
+    <Content Include="Images\improve-business-ipad.jpg" />
+    <Content Include="Images\improve-business.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\video.jpg" />
+    <Content Include="Images\video1.jpg" />
+    <Content Include="Admin_\IStudent.aspx" />
+    <Content Include="Kotish\Scripts\Awesome\Create_Section.js" />
+    <Content Include="Kotish\Scripts\Awesome\Properties.js" />
+    <Content Include="Kotish\Scripts\Awesome\Tests_Cards.js" />
+    <Content Include="Kotish\Styles\Awesome\Add_New.css" />
+    <Content Include="Kotish\Scripts\Awesome\Mid_Cards.js" />
+    <Content Include="Kotish\Scripts\Awesome\Stud_Cards.js" />
+    <Content Include="Kotish\Styles\animate.css" />
+    <Content Include="Kotish\Styles\Awesome.css" />
+    <Content Include="Kotish\Awesome.html" />
+    <Content Include="Kotish\Scripts\Awesome.js" />
+    <Content Include="Kotish\Styles\Awesome\Create_Section.css" />
+    <Content Include="Kotish\Styles\Awesome\Mid_Cards.css" />
+    <Content Include="Kotish\Styles\Awesome\Properties.css" />
+    <Content Include="Kotish\Styles\Awesome\Search_Section.css" />
+    <Content Include="Kotish\Styles\Awesome\Stud_Class.css" />
+    <Content Include="Kotish\Styles\Awesome\Tests_Class.css" />
+    <Content Include="Kotish\Styles\Change_Modal.css" />
+    <Content Include="Kotish\Styles\DDUpload.css" />
+    <Content Include="Kotish\Demo\Test.aspx" />
+    <Content Include="Kotish\Demo\Test.css" />
+    <Content Include="Kotish\Demo\Test.js" />
+    <Content Include="Kotish\Styles\Design.css" />
+    <Content Include="Kotish\dist\css\swiper.css" />
+    <Content Include="Kotish\dist\css\swiper.min.css" />
+    <Content Include="Kotish\dist\js\swiper.esm.bundle.js" />
+    <Content Include="Kotish\dist\js\swiper.esm.js" />
+    <Content Include="Kotish\dist\js\swiper.js" />
+    <Content Include="Kotish\dist\js\swiper.min.js" />
+    <Content Include="Kotish\Styles\Glow.css" />
+    <Content Include="Kotish\Styles\Loader.css" />
+    <Content Include="Kotish\Styles\Login.css" />
+    <Content Include="Kotish\Styles\Modal.css" />
+    <Content Include="Kotish\Scripts\Modal.js" />
+    <Content Include="Kotish\Styles\ODA.css" />
+    <Content Include="Kotish\Styles\Question.css" />
+    <Content Include="Kotish\Scripts\Question.js" />
+    <Content Include="Kotish\Styles\Reponsive.css" />
+    <Content Include="Kotish\Scripts\Sparkle.js" />
+    <Content Include="Kotish\swiper-4.3.5\.eslintrc.js" />
+    <Content Include="Kotish\swiper-4.3.5\.gitignore" />
+    <Content Include="Kotish\swiper-4.3.5\demos\010-default.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\020-navigation.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\030-pagination.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\040-pagination-dynamic.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\050-pagination-progress.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\060-pagination-fraction.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\070-pagination-custom.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\080-scrollbar.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\090-vertical.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\100-space-between.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\110-slides-per-view.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\120-slides-per-view-auto.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\130-centered.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\140-centered-auto.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\150-freemode.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\160-scroll-container.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\170-slides-per-column.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\180-nested.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\190-grab-cursor.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\200-infinite-loop.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\210-infinite-loop-with-slides-per-group.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\220-effect-fade.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\230-effect-cube.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\240-effect-coverflow.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\250-effect-flip.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\260-keyboard-control.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\270-mousewheel-control.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\280-autoplay.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\290-dynamic-slides.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\300-thumbs-gallery.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\310-thumbs-gallery-loop.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\320-multiple-swipers.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\330-hash-navigation.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\340-history.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\350-rtl.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\360-parallax.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\370-lazy-load-images.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\380-responsive-breakpoints.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\390-autoheight.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\400-zoom.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\410-virtual-slides.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\420-custom-plugin.html" />
+    <Content Include="Kotish\swiper-4.3.5\demos\430-slideable-menu.html" />
+    <Content Include="Kotish\swiper-4.3.5\dist\css\swiper.css" />
+    <Content Include="Kotish\swiper-4.3.5\dist\css\swiper.min.css" />
+    <Content Include="Kotish\swiper-4.3.5\dist\js\swiper.esm.bundle.js" />
+    <Content Include="Kotish\swiper-4.3.5\dist\js\swiper.esm.js" />
+    <Content Include="Kotish\swiper-4.3.5\dist\js\swiper.js" />
+    <Content Include="Kotish\swiper-4.3.5\dist\js\swiper.min.js" />
+    <Content Include="Kotish\swiper-4.3.5\gulpfile.js" />
+    <Content Include="Kotish\swiper-4.3.5\package.js" />
+    <Content Include="Kotish\swiper-4.3.5\playground\index.html" />
+    <Content Include="Kotish\swiper-4.3.5\scripts\banner.js" />
+    <Content Include="Kotish\swiper-4.3.5\scripts\build-config.js" />
+    <Content Include="Kotish\swiper-4.3.5\scripts\build-js.js" />
+    <Content Include="Kotish\swiper-4.3.5\scripts\build-less.js" />
+    <Content Include="Kotish\swiper-4.3.5\scripts\gulpfile.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\a11y\a11y.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\autoplay\autoplay.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\controller\controller.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\breakpoints\getBreakpoint.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\breakpoints\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\breakpoints\setBreakpoint.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\check-overflow\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\classes\addClasses.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\classes\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\classes\removeClasses.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\core-class.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\defaults.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\events\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\events\onClick.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\events\onResize.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\events\onTouchEnd.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\events\onTouchMove.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\events\onTouchStart.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\grab-cursor\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\grab-cursor\setGrabCursor.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\grab-cursor\unsetGrabCursor.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\images\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\images\loadImage.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\images\preloadImages.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\loop\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\loop\loopCreate.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\loop\loopDestroy.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\loop\loopFix.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\manipulation\addSlide.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\manipulation\appendSlide.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\manipulation\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\manipulation\prependSlide.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\manipulation\removeAllSlides.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\manipulation\removeSlide.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\slideNext.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\slidePrev.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\slideReset.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\slideTo.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\slideToClickedSlide.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\slideToClosest.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\slide\slideToLoop.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\transition\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\transition\setTransition.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\transition\transitionEnd.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\transition\transitionStart.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\translate\getTranslate.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\translate\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\translate\maxTranslate.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\translate\minTranslate.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\translate\setTranslate.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\index.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateActiveIndex.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateAutoHeight.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateClickedSlide.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateProgress.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateSize.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateSlides.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateSlidesClasses.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateSlidesOffset.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\update\updateSlidesProgress.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-coverflow\effect-coverflow.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-cube\effect-cube.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-fade\effect-fade.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-flip\effect-flip.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\hash-navigation\hash-navigation.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\history\history.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\keyboard\keyboard.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\lazy\lazy.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\mousewheel\mousewheel.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\navigation\navigation.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\pagination\pagination.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\parallax\parallax.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\scrollbar\scrollbar.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\virtual\virtual.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\zoom\zoom.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\modules\browser\browser.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\modules\device\device.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\modules\observer\observer.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\modules\resize\resize.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\modules\support\support.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\swiper.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\utils\browser.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\utils\class.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\utils\device.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\utils\dom.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\utils\support.js" />
+    <Content Include="Kotish\swiper-4.3.5\src\utils\utils.js" />
+    <Content Include="Kotish\Styles\Switch.css" />
+    <Content Include="Kotish\Styles\Tab.css" />
+    <Content Include="Kotish\Scripts\Tab.js" />
+    <Content Include="Kotish\Scripts\Test_Process.js" />
+    <Content Include="Kotish\Scripts\Touch.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Admin_\MyAdmins.aspx" />
+    <Content Include="Admin_\MyStudents.aspx" />
+    <Content Include="Admin_\Profile.aspx" />
+    <Content Include="Admin_\Put_Question.aspx" />
+    <Content Include="Admin_\Question.aspx" />
+    <Content Include="Admin_\Questions.aspx" />
+    <Content Include="User\Result.aspx" />
+    <Content Include="User\SaveF.aspx" />
+    <Content Include="script\all-plugins.js" />
+    <Content Include="script\jquery-3.2.1.min.js" />
+    <Content Include="script\plugin-active.js" />
+    <Content Include="Sheets.aspx" />
+    <Content Include="User\Student.asmx" />
+    <Content Include="User\Students_All.aspx" />
+    <Content Include="styles\about-us.css" />
+    <Content Include="styles\custom-responsive-style.css" />
+    <Content Include="styles\framework.css" />
+    <Content Include="styles\index.html" />
+    <Content Include="styles\style.css" />
+    <Content Include="User\S_Home.aspx" />
+    <Content Include="User\S_Profile.aspx" />
+    <Content Include="Admin_\Test_Assign.aspx" />
+    <Content Include="Admin_\Test_Checker.aspx" />
+    <Content Include="Admin_\Test_Maker.aspx" />
+    <Content Include="User\Test_Page.aspx" />
+    <Content Include="Admin_\Truncate.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_\AddAdmin.aspx.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\AddAdmin.aspx.designer.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\AddStudents.aspx.cs">
+      <DependentUpon>AddStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\AddStudents.aspx.designer.cs">
+      <DependentUpon>AddStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Admin_Info.ashx.cs">
+      <DependentUpon>Admin_Info.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\APIs\Data.ashx.cs">
+      <DependentUpon>Data.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Batches.aspx.cs">
+      <DependentUpon>Batches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Batches.aspx.designer.cs">
+      <DependentUpon>Batches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Create_Batch.aspx.cs">
+      <DependentUpon>Create_Batch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Create_Batch.aspx.designer.cs">
+      <DependentUpon>Create_Batch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\IStudent.aspx.cs">
+      <DependentUpon>IStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\IStudent.aspx.designer.cs">
+      <DependentUpon>IStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kotish\Codes\Connection.cs" />
+    <Compile Include="Kotish\Codes\Delete.cs" />
+    <Compile Include="Kotish\Codes\Find.cs" />
+    <Compile Include="Kotish\Codes\Insertion.cs" />
+    <Compile Include="Kotish\Codes\Search.cs" />
+    <Compile Include="Kotish\Codes\Secure.cs" />
+    <Compile Include="Kotish\Codes\Truncate.cs" />
+    <Compile Include="Kotish\Codes\Updaters.cs" />
+    <Compile Include="Kotish\Demo\Data.cs" />
+    <Compile Include="Kotish\Demo\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kotish\Demo\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\MyAdmins.aspx.cs">
+      <DependentUpon>MyAdmins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\MyAdmins.aspx.designer.cs">
+      <DependentUpon>MyAdmins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\MyStudents.aspx.cs">
+      <DependentUpon>MyStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\MyStudents.aspx.designer.cs">
+      <DependentUpon>MyStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin_\Put_Question.aspx.cs">
+      <DependentUpon>Put_Question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Put_Question.aspx.designer.cs">
+      <DependentUpon>Put_Question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Question.ashx.cs">
+      <DependentUpon>Question.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Question.aspx.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Question.aspx.designer.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Questions.aspx.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Questions.aspx.designer.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\SaveF.aspx.cs">
+      <DependentUpon>SaveF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SaveF.aspx.designer.cs">
+      <DependentUpon>SaveF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sheets.aspx.cs">
+      <DependentUpon>Sheets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sheets.aspx.designer.cs">
+      <DependentUpon>Sheets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Student.asmx.cs">
+      <DependentUpon>Student.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User\Student.Master.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Student.Master.designer.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\Students_All.aspx.cs">
+      <DependentUpon>Students_All.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Students_All.aspx.designer.cs">
+      <DependentUpon>Students_All.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Student_Info.ashx.cs">
+      <DependentUpon>Student_Info.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="User\S_Home.aspx.cs">
+      <DependentUpon>S_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\S_Home.aspx.designer.cs">
+      <DependentUpon>S_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\S_Profile.aspx.cs">
+      <DependentUpon>S_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\S_Profile.aspx.designer.cs">
+      <DependentUpon>S_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Test_Assign.aspx.cs">
+      <DependentUpon>Test_Assign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Test_Assign.aspx.designer.cs">
+      <DependentUpon>Test_Assign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Test_Checker.aspx.cs">
+      <DependentUpon>Test_Checker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Test_Checker.aspx.designer.cs">
+      <DependentUpon>Test_Checker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Test_Maker.aspx.cs">
+      <DependentUpon>Test_Maker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Test_Maker.aspx.designer.cs">
+      <DependentUpon>Test_Maker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Test_Page.aspx.cs">
+      <DependentUpon>Test_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Test_Page.aspx.designer.cs">
+      <DependentUpon>Test_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_\Truncate.aspx.cs">
+      <DependentUpon>Truncate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_\Truncate.aspx.designer.cs">
+      <DependentUpon>Truncate.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin_\Admin.Master" />
+    <Content Include="Kotish\dist\js\swiper.min.js.map" />
+    <Content Include="Kotish\swiper-4.3.5\.editorconfig" />
+    <Content Include="Kotish\swiper-4.3.5\.eslintignore" />
+    <Content Include="Kotish\swiper-4.3.5\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Kotish\swiper-4.3.5\.github\lock.yml" />
+    <Content Include="Kotish\swiper-4.3.5\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Kotish\swiper-4.3.5\.github\stale.yml" />
+    <Content Include="Kotish\swiper-4.3.5\.npmignore" />
+    <Content Include="Kotish\swiper-4.3.5\.travis.yml" />
+    <Content Include="Kotish\swiper-4.3.5\Architecture.md" />
+    <Content Include="Kotish\swiper-4.3.5\bower.json" />
+    <Content Include="Kotish\swiper-4.3.5\CHANGELOG.md" />
+    <Content Include="Kotish\swiper-4.3.5\component.json" />
+    <Content Include="Kotish\swiper-4.3.5\composer.json" />
+    <Content Include="Kotish\swiper-4.3.5\CONTRIBUTING.md" />
+    <Content Include="Kotish\swiper-4.3.5\dist\js\swiper.min.js.map" />
+    <Content Include="Kotish\swiper-4.3.5\LICENSE" />
+    <Content Include="Kotish\swiper-4.3.5\package-lock.json" />
+    <Content Include="Kotish\swiper-4.3.5\package.json" />
+    <Content Include="Kotish\swiper-4.3.5\README.md" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\a11y\a11y.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\controller\controller.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\core\core.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-coverflow\effect-coverflow.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-cube\effect-cube.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-fade\effect-fade.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\effect-flip\effect-flip.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\lazy\lazy.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\navigation\navigation.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\pagination\pagination.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\scrollbar\scrollbar.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\components\zoom\zoom.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\less\mixins.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\modules\resize\resize.less" />
+    <Content Include="Kotish\swiper-4.3.5\src\swiper.less" />
+    <Content Include="package.json" />
+    <Content Include="Images\favicons\.DS_Store" />
+    <Content Include="Images\favicons\site.webmanifest" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-Black.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-Bold.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-Italic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-Light.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-Medium.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-Regular.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-Thin.ttf" />
+    <Content Include="Demos\Kotish\Fonts\Poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Kotish\911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf" />
+    <Content Include="Admin_\Admin_Info.ashx" />
+    <Content Include="Admin_\APIs\Data.ashx" />
+    <None Include="packages.config" />
+    <Content Include="User\Student.Master" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <Content Include="Admin_\Question.ashx" />
+    <Content Include="User\Student_Info.ashx" />
+    <None Include="Properties\PublishProfiles\Default Settings1.pubxml" />
+    <None Include="Properties\PublishProfiles\Default Settings2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Audio\Answers\" />
+    <Folder Include="Audio\Question\" />
+    <Folder Include="Images\Question\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63096</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63096/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

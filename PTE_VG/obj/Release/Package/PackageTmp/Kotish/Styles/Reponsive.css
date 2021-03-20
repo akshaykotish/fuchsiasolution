@@ -1,0 +1,67 @@
+﻿.container {
+    /*add flexbox style*/
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-flow: wrap;
+    display: normal;
+    width: 100%;
+    background-image: url('Images/Icons/texture.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.box {
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+    /*min-width: 200px;
+    max-width: 410px;
+    min-height: 200px;
+    max-height: 400px;
+    width: auto;
+    height: auto;*/
+}
+
+/*address responsive media quaries*/
+
+
+@media only screen and (max-width:600px) {
+    .box {
+        width: 97.5%;
+    }
+
+    .Header {
+        display: none;
+    }
+
+    .Header-mob {
+        width: 102%;
+        height: 70px;
+        margin: -2%;
+        padding: 1%;
+    }
+
+    .Brand-Banner {
+        display: none;
+    }
+
+    .Header {
+        display: none;
+    }
+
+    .Header-mob {
+        width: 102%;
+        height: 70px;
+        margin: -2%;
+        padding: 1%;
+    }
+
+    .Brand-Banner {
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+﻿.Add_New_Section {
+    margin-left: 4%;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.Plus_btn {
+   color: #B7386E;
+   font-size:xx-large;
+    padding:5%;
+    font-weight:bold;
+}
+
+.Text{
+    color:gray;
+    font-weight:500;
+}

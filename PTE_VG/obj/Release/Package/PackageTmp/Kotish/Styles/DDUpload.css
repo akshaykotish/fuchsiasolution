@@ -1,0 +1,60 @@
+﻿.dropzone {
+    width: 45%;
+    height: 10vh;
+    background-color: white;
+    padding: 2%;
+    box-shadow:1px 1px 1px 1px gray;
+}
+
+.dropondrop {
+    width: 45%;
+    height: 10vh;
+    padding: 2%;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+.dropdrag {
+    width: 45%;
+    height: 10vh;
+    padding: 2%;
+    background-color:lightgray;
+    box-shadow: none;
+}
+
+
+.audio {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-image: url('../Images/Icons/Audio.png');
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+
+.img {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-image: url('../Images/Icons/img.png');
+    background-position: center;
+    background-size: 50%;
+    background-repeat:no-repeat;
+}
+
+input[type=file]
+{
+    background-color:white;
+    color:gray;
+    font-size:small;
+    max-width:200px;
+    overflow:hidden;
+}
+
+.upld-btm{
+    margin-top:70%;
+    width:100%;
+    text-align:center;
+    color:gray;
+    font-size:small;
+}
